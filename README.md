@@ -26,7 +26,8 @@
   console.log(thread.errors)
   ```
 ### The console will show: 
-  ``` #ff0000 #ff0000
+  ```
+  `#ff0000` `#ff0000`
   Task: 'Foo Thread': An error ocurred in the task: 'Foo task' (1)
   [
     {
