@@ -1,12 +1,12 @@
-This class will allows you make Javascript threads in a simple way. How simple? Well, you can do it in a single line of code (not counting the import):
+###This class will allows you make Javascript threads in a simple way. How simple? Well, you can do it in a single line of code (not counting the import):
 
   new Thread().add( () => { console.log("Didn't I tell you?") }).start()
 
-This code will print 'Didn't I tell you?' to the console once a second. If you want change the period to once every 2 seconds for example, you'll only need to pass 2000 as a constructor parameter:
+###This code will print 'Didn't I tell you?' to the console once a second. If you want change the period to once every 2 seconds for example, you'll only need to pass 2000 as a constructor parameter:
 
   new Thread(2000).add( () => { console.log('This task is running once every 2 seconds') }).start()
 
-You can also save the thread and use later:
+###You can also save the thread and use later:
 
   var counter = 1
   const printCounter = () => {
@@ -20,12 +20,12 @@ You can also save the thread and use later:
 
   if (skyIsBlue()) { thread.remove(printCounter) }
   
-Don't worry about possible erros in your tasks. The thread will catch and save them in the error array:
+###Don't worry about possible erros in your tasks. The thread will catch and save them in the error array:
 
   const thread = new Thread().name('Foo Thread').add( () => { consooooole.log('foo') }).name('Foo task').start()
   console.log(thread.errors)
   
-The console will show: 
+###The console will show: 
   Task: 'Foo Thread': An error ocurred in the task: 'Foo task' (1)
   [
     {
